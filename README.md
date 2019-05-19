@@ -45,7 +45,7 @@ const api = new oauth.OAuth(
 );
 
 api.get(
-	`${config.api_url}/accounts.json`,
+	'https://api.tradeking.com/v1/accounts.json',
 	config.access_token,
 	config.access_secret,
 	(error, data, response) => {
@@ -59,7 +59,7 @@ api.get(
 
 ```javascript
 const stream = api.get(
-	`${config.stream_url}/market/quotes.json`,
+	'https://stream.tradeking.com/v1/market/quotes.json',
 	config.access_token,
 	config.access_secret
 	// Notice no callback function. Get response below
