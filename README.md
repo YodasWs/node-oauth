@@ -55,6 +55,24 @@ api.get(
 );
 ```
 
+#### User Login
+```javascript
+api.getOAuthRequestToken((error, request_token, request_secret, results) => {
+	if (error) {
+		// …
+		return;
+	}
+	api.getOAuthAccessToken(token, secret, (error, access_token, access_secret, results) => {
+		if (error) {
+			// …
+			return;
+		}
+		alert('You have logged in!');
+	});
+});
+```
+
+
 #### Streaming Response
 
 ```javascript
